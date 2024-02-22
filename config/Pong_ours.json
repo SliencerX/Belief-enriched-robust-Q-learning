@@ -1,0 +1,14 @@
+{
+  "env_id": "PongNoFrameskip-v4",
+    "training_config": {
+      "env_params": {
+          "crop_shift": 10,
+          "restrict_actions": 4
+      },
+        "ours": true,
+        "robust": false,
+        "save_frame": 5000,
+        "lr":0.000002,
+        "buffer_params": {"replay_initial": 10000, "buffer_capacity": 200000, "buffer_beta_start": 0.4,"buffer_beta_frames": -1, "alpha": 0.5}
+    }
+}

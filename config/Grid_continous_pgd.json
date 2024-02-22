@@ -1,0 +1,20 @@
+{
+    "env_id": "Grid_Continous_pgd",
+    "training_config": {
+        "ours": false,
+        "robust": true,
+        "lr": 0.001,
+        "schedule_start": 0,
+        "save_frame": 5000,
+        "act_epsilon_decay": 1000,
+        "dueling": false,
+        "num_frames": 1000000,
+        "lr":0.0001,
+        "buffer_params": {"replay_initial": 10000, "buffer_capacity": 1000000, "buffer_beta_start": 0.4,"buffer_beta_frames": -1, "alpha": 0.5},
+        "bound_solver": "pgd",
+        "attack_config":{"method": "pgd",
+          "verbose": false,
+          "params":{"epsilon": 0.5, "niters": 10, "img_min": 0.0, "img_max": 10.0, "random_start": true}
+        }
+    }
+}
