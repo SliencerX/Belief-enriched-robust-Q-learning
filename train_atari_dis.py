@@ -922,7 +922,7 @@ def main(args):
             return D(model, betas, time_scale=time_scale, sampler=sampler)
         teacher = make_model().to(device)
         #load diffusion distiller model here
-        ckpt = torch.load('./diffusion_distiller/checkpoints/atari_freeway/base_3/checkpoint.pt')
+        ckpt = torch.load('./diffusion_distiller/checkpoints/atari_pong/base_3/checkpoint.pt')
         teacher.load_state_dict(ckpt["G"])
         n_timesteps = ckpt["n_timesteps"]
         time_scale = ckpt["time_scale"]
@@ -930,7 +930,7 @@ def main(args):
         print("Model loaded.")
         teacher_diffusion = make_diffusion(args, teacher, n_timesteps, time_scale, device)
         # image_size[0] = args.batch_size
-        teacher_diffusion.num_timesteps = 4
+        teacher_diffusion.num_timesteps = 2
         state_diff = make_visualization_withprior(teacher_diffusion, device, [1, 1, 84, 84], state.transpose(0,2,1)/255, need_tqdm=False, eta=0, clip_value=1.2)[0].cpu().numpy().transpose(0,2,1)
 
 
