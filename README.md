@@ -2,7 +2,7 @@
 
 This is the official code for our paper [Belief-Enriched Pessimistic Q-Learning against Adversarial State Perturbations](https://openreview.net/forum?id=7gDENzTzw1&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2024%2FConference%2FAuthors%23your-submissions)) published at ICLR 2024. The default environment for Atari is Pong, you need to change the environment by changing the configs and use coresponding diffusion model.
 
-This repo contains PF-RNN code from [Particle Filter Recurrent Neural Networks(Ma et.al., 2019)](https://github.com/Yusufma03/pfrnns) and code from Progressive Distillation for [Fast Sampling of Diffusion Models(Salimans and HO, 2022)](https://github.com/Hramchenko/diffusion_distiller) 
+This repo contains PF-RNN code from [Particle Filter Recurrent Neural Networks(Ma et.al., 2019)](https://github.com/Yusufma03/pfrnns) and code from Progressive Distillation for [Fast Sampling of Diffusion Models(Salimans and HO, 2022)](https://github.com/Hramchenko/diffusion_distiller). This code is based on [SA-DQN](https://github.com/chenhongge/SA_DQN) 
 
 We include pretrained PF-RNN, diffusion models and our models in pretrained folders
 ## Train PF-RNN Model
